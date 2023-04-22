@@ -176,3 +176,15 @@ function editContact(firstName, lastName, details, newValue) {
 
 console.log("\nAfter Editing Contact")
 editContact("Anjali","Rawke","address","Vadepuri");
+
+function deleteContact(firstName, lastName){
+    if(contactExists(firstName, lastName)){
+        addressBookArray = addressBookArray.filter((contact) => contact.firstName != firstName && contact.lastName != lastName);
+    }else{
+        console.log("Contact Does Not Exist");
+    }
+    console.log(addressBookArray.toString());
+}
+
+console.log("\nAfter Deleting Contact");
+deleteContact("Apeksha","Patil")
