@@ -27,7 +27,7 @@ class AddressBook {
 // Create a new address book.
 let myAddressBook = new AddressBook();
 
-// Add some contacts to the address book.
+
 myAddressBook.addContact(new Contact("Anjali", "Rawke", "Bhagwant Nagar", "Nanded", "Maharashtra", "431605", "7058162286", "anjalirawke@gmail.com"));
 myAddressBook.addContact(new Contact("Apeksha", "Patil", "Anand Nagar", "Nanded", "Maharashtra", "431605", "9011100740", "apekshapatil@gmail.com"));
 
