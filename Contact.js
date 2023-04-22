@@ -128,7 +128,11 @@ class Contact{
     }
 }
 
-
-
-let myContact = new Contact('Anjali', 'Rawke', 'Bhagwantnagar', 'Nanded', 'Maharashtra', '431605', '917058162286', 'anjalirawke@gmail.com');
-console.log(myContact.toString());
+let AddressBookArray=[];
+let Contact1 = new Contact('Anjali', 'Rawke', 'Bhagwantnagar', 'Nanded', 'Maharashtra', '431605', '917058162286', 'anjalirawke@gmail.com');
+AddressBookArray.push(Contact1);
+let Contact2 = new Contact('Apeksha', 'Patil', 'Anandnagar', 'Nanded', 'Maharashtra', '431605', '919011100740', 'apekshapatil@gmail.com');
+AddressBookArray.push(Contact2);
+console.log(Contact1.toString());
+console.log("");
+console.log(Contact2.toString());
