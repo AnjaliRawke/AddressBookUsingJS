@@ -188,3 +188,10 @@ function deleteContact(firstName, lastName){
 
 console.log("\nAfter Deleting Contact");
 deleteContact("Apeksha","Patil")
+
+function CountOfContacts(count) {
+    count += 1;
+    return count;
+}
+
+console.log("\No of Contacts : " + addressBookArray.reduce(CountOfContacts, 0));
