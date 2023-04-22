@@ -128,11 +128,51 @@ class Contact{
     }
 }
 
-let AddressBookArray=[];
+let addressBookArray=[];
 let Contact1 = new Contact('Anjali', 'Rawke', 'Bhagwantnagar', 'Nanded', 'Maharashtra', '431605', '917058162286', 'anjalirawke@gmail.com');
-AddressBookArray.push(Contact1);
+addressBookArray.push(Contact1);
 let Contact2 = new Contact('Apeksha', 'Patil', 'Anandnagar', 'Nanded', 'Maharashtra', '431605', '919011100740', 'apekshapatil@gmail.com');
-AddressBookArray.push(Contact2);
+addressBookArray.push(Contact2);
+
+
 console.log(Contact1.toString());
 console.log("");
 console.log(Contact2.toString());
+
+function contactExists(firstName, lastName) {
+    return addressBookArray.some(contact => contact.firstName == firstName && contact.lastName == lastName);
+}
+
+function editContact(firstName, lastName, details, newValue) {
+    if (contactExists(firstName, lastName)) {
+        switch (details) {
+            case "address":
+                addressBookArray.find((contact) => contact.firstName == firstName).address = newValue;
+                break;
+            case "city":
+                addressBookArray.find((contact) => contact.firstName == firstName).city = newValue;
+                break;
+            case "state":
+                addressBookArray.find((contact) => contact.firstName == firstName).state = newValue;
+                break;
+            case "zip":
+                addressBookArray.find((contact) => contact.firstName == firstName).zip = newValue;
+                break;
+            case "phoneNumber":
+                addressBookArray.find((contact) => contact.firstName == firstName).phoneNumber = newValue;
+                break;
+            case "email":
+                addressBookArray.find((contact) => contact.firstName == firstName).email = newValue;
+                break;
+            default:
+                console.log("Enter valid details");
+        }
+    }
+    else {
+        console.log("Contact Does Not Exist");
+    }
+    console.log(addressBookArray.toString());
+}
+
+console.log("\nAfter Editing Contact")
+editContact("Anjali","Rawke","address","Vadepuri");
