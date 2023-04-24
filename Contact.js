@@ -227,3 +227,13 @@ console.log(searchContactByCity("Nanded").toString());
 console.log("\nSearch Contact By State");
 console.log(searchContactByState("Maharashtra").toString());
 
+function getCountOfContactsByCity(city){
+  return addressBookArray.filter((contact) => contact.city == city).length;
+}
+
+function getCountOfContactsByState(state){
+  return addressBookArray.filter((contact) => contact.state == state).length;
+}
+
+console.log("\nNumber of Contacts residing in City : Nanded = " + getCountOfContactsByCity("Nanded"));
+console.log("\nNumber of Contacts residing in State : Maharashtra = " + getCountOfContactsByState("Maharashtra"));
