@@ -245,3 +245,27 @@ function sortAddressBookByName(){
 
 console.log("\nContacts In Alphabetical Order");
 sortAddressBookByName();
+
+function sortAddressBookByCity(){
+  addressBookArray.sort((firstPerson, secondPerson) => (firstPerson.city).localeCompare(secondPerson.city));
+  console.log(addressBookArray.toString());
+}
+
+function sortAddressBookByState(){
+  addressBookArray.sort((firstPerson, secondPerson) => (firstPerson.state).localeCompare(secondPerson.state));
+  console.log(addressBookArray.toString());
+}
+
+function sortAddressBookByZip(){
+  addressBookArray.sort((firstPerson, secondPerson) => (firstPerson.zip).localeCompare(secondPerson.zip));
+  console.log(addressBookArray.toString());
+}
+
+console.log("\nContacts Sorted Using City");
+sortAddressBookByCity();
+
+console.log("\nContacts Sorted Using State");
+sortAddressBookByState();
+
+console.log("\nContacts Sorted Using Zip");
+sortAddressBookByZip();
