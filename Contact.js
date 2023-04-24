@@ -212,3 +212,17 @@ try {
     console.error(e);
 }
 console.log(addressBookArray.toString());
+
+function searchContactByCity(city) {
+  return addressBookArray.filter((contact) => contact.city == city);
+}
+
+function searchContactByState(state) {
+  return addressBookArray.filter((contact) => contact.state == state);
+}
+
+console.log("\nSearch Contact By City");
+console.log(searchContactByCity("Nanded").toString());
+
+console.log("\nSearch Contact By State");
+console.log(searchContactByState("Maharashtra").toString());
