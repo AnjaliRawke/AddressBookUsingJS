@@ -237,3 +237,11 @@ function getCountOfContactsByState(state){
 
 console.log("\nNumber of Contacts residing in City : Nanded = " + getCountOfContactsByCity("Nanded"));
 console.log("\nNumber of Contacts residing in State : Maharashtra = " + getCountOfContactsByState("Maharashtra"));
+
+function sortAddressBookByName(){
+  addressBookArray.sort((firstPerson, secondPerson) => (firstPerson.firstName).localeCompare(secondPerson.firstName));
+  console.log(addressBookArray.toString());
+}
+
+console.log("\nContacts In Alphabetical Order");
+sortAddressBookByName();
