@@ -195,3 +195,20 @@ function CountOfContacts(count) {
 }
 
 console.log("\No of Contacts : " + addressBookArray.reduce(CountOfContacts, 0));
+
+function addContact(contact) {
+  if (!contactExists(contact.firstName, contact.lastName))
+      addressBookArray.push(contact);
+  else
+      throw "Contact is Present in the Address Book";
+
+}
+
+console.log("\nAdding Duplicate Contact");
+try {
+    addContact(Contact2);
+    addContact(Contact1);
+} catch (e) {
+    console.error(e);
+}
+console.log(addressBookArray.toString());
